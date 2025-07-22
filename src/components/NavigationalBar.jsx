@@ -1,54 +1,73 @@
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
-import {
-  Dialog,
-  DialogTrigger,
-  DialogContent
-} from "@/components/ui/dialog"
-import {
-  Command,
-  CommandInput,
-  CommandList,
-  CommandItem
-} from "@/components/ui/command"
+import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Input } from '@headlessui/react'
+
+const navigation = [
+  { name: 'Dashboard', href: '#', current: true },
+  { name: 'Team', href: '#', current: false },
+  { name: 'Projects', href: '#', current: false },
+  { name: 'Calendar', href: '#', current: false },
+]
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
 
 export default function NavigationalBar() {
   return (
-    <header className="w-full border-b">
-      <div className="container mx-auto flex items-center justify-between py-4">
-        <h1 className="text-xl font-bold  d cursor-pointer">Dish It.</h1>
-        
-        <div>
-          <Dialog>
-            <DialogTrigger>
-              <button className=" rounded border-2 text-start h-10 p-2 border-gray-600 w-80">Search</button>
-            </DialogTrigger>
-            <DialogContent className="p-0 overflow-hidden">
-              <Command>
-                <CommandInput placeholder="Type to search..." />
-                <CommandList>
-                  <CommandItem>Home</CommandItem>
-                  <CommandItem>Profile</CommandItem>
-                  <CommandItem>Logout</CommandItem>
-                </CommandList>
-              </Command>
-            </DialogContent>
-          </Dialog>
+    <Disclosure as="nav" className="bg-amber-900">
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div className="relative flex h-16 items-center ">
+          <div className="absolute inset-y-0 left-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <h1 className='text-2xl text-white font-medium'>Dish it.</h1>
         </div>
 
-        <NavigationMenu>
-          <NavigationMenuList className="flex gap-4">
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/" className="text-sm font-medium hover:underline">Home</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/meals" className="text-sm font-medium hover:underline">Meals</NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink href="/about" className="text-sm font-medium hover:underline">About</NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        <div className="flex flex-1 items-center justify-between sm:items-stretch">
+          <div className="hidden sm:ml-6 sm:block  w-full">
+            <div className="flex  w-full justify-end ">
+              <a href="" className='text-gray-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium'>Home</a>
+              <a href="" className='text-gray-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium'>Favorites</a>
+              <a href="" className='text-gray-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium'>Country Dish</a>
+              <a href="" className='text-gray-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium'>Browse Dish</a>
+            </div>
+          </div>
+        </div>
+        
+
+          <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+            {/* Mobile menu button*/}
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
+              <span className="absolute -inset-0.5" />
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon aria-hidden="true" className="block size-6 group-data-open:hidden" />
+              <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
+            </DisclosureButton>
+          </div>
+        </div>
       </div>
-    </header>
+
+       <DisclosurePanel className="sm:hidden">
+        <div className="space-y-1 px-2 pt-2 pb-3">
+          {navigation.map((item) => (
+            <DisclosureButton
+              key={item.name}
+              as="a"
+              href={item.href}
+              aria-current={item.current ? 'page' : undefined}
+              className={classNames(
+                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                'block rounded-md px-3 py-2 text-base font-medium',
+              )}
+            >
+              {item.name}
+            </DisclosureButton>
+          ))}
+        </div>
+      </DisclosurePanel>
+    </Disclosure>
+     
+
+     
   );
 }
