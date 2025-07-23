@@ -1,0 +1,6 @@
+1. in navbar is not ok
+  the search may be change itdepends on toolover(recent search) in below when focused
+  it may be center
+  how navbar is link to each other (pages)(will do later)
+  how its gonna search in (like tailwind navbar search)
+  

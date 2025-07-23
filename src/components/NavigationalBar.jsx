@@ -15,7 +15,7 @@ const navigation = [
 
 export default function NavigationalBar() {
   return (
-    <Disclosure as="nav" className="bg-amber-900">
+    <Disclosure as="nav" className="bg-primary">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-17 items-center justify-between">
           <div className="flex-shrink-0">
