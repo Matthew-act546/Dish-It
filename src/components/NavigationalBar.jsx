@@ -17,7 +17,7 @@ export default function NavigationalBar() {
   return (
     <Disclosure as="nav" className="bg-amber-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-17 items-center justify-between">
           <div className="flex-shrink-0">
             <h1 className="text-2xl text-white font-semibold">Dish it.</h1>
           </div>
