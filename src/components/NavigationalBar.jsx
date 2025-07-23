@@ -31,6 +31,14 @@ export default function NavigationalBar() {
             />
           </div>
 
+          <div className="flex flex-1 justify-end mr-3 md:hidden">
+            <button className='bg-white rounded-full w-9 h-9 flex items-center justify-center'>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 text-amber-900">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+            </button>
+          </div>
+
           {/* Right: Navigation links */}
           <div className="hidden sm:flex sm:items-center sm:space-x-4">
             {navigation.map((item) => (
