@@ -13,10 +13,10 @@ export default function About() {
         <div className="container mt-7 ">
           <div className="text-center">
             <h1 className="text-primary text-5xl font-bold text-center">Our Features</h1>
-            <p className="text-sm">Our primary features</p>
+            <p className="text-sm text-primary">Our primary features</p>
           </div>
           
-          <div className="grid grid-cols-3 mt-2">
+          <div className="grid grid-cols-1 gap-15 mx-10 md:grid-cols-2 lg:grid-cols-3">
             <div className="h-80 rounded-2xl flex flex-col items-center justify-center text-wrap">
               <img src={recipeImage} alt="" className='h-25'/>
               <h2 className="text-primary text-2xl font-bold text-center">Recipe Instructions</h2>
