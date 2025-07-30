@@ -4,4 +4,4 @@
   how navbar is link to each other (pages)(will do later)
   how its gonna search in (like tailwind navbar search)
   when in phone the hero is going down (might go with offcanvas like)
-  
+  df
