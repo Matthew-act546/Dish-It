@@ -19,12 +19,13 @@ export default function Home() {
               Dish It makes it easy to find, learn, and enjoy meals from all cuisines — all in one place.
 
             </p>
-            <a
-              href=""
+            <Link
+              to="/BrowseDish"
               className="bg-primary text-white uppercase font-semibold px-6 py-3 rounded-md transition-all inline-block hover:scale-95"
             >
-              <Link to="/BrowseDish">Browse Dish</Link>
-            </a>
+              Browse Dish
+            </Link>
+
           </div>
         </div>
       </div>

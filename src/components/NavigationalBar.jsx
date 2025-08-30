@@ -1,25 +1,27 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function NavigationalBar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Use actual route paths here
   const navigation = [
-    { name: "Home", href: "#fd", current: false },
-    { name: "Favorites", href: "#", current: false },
-    { name: "Country Dish", href: "#", current: false },
-    { name: "Browse Dish", href: "#", current: false },
+    { name: "Home", to: "/", current: false },
+    { name: "Favorites", to: "/Favorites", current: false },
+    { name: "Country Dish", to: "/CountryDish", current: false },
+    { name: "Browse Dish", to: "/BrowseDish", current: false },
   ];
 
   return (
     <nav className="bg-[#8C5050]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Logo */}
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="./logo.png" className="h-12" alt="Dish Logo" />
           <span className="self-center text-2xl font-semibold text-white whitespace-nowrap">
             Dish it.
           </span>
-        </a>
+        </Link>
 
         {/* Toggle Button */}
         <button
@@ -51,9 +53,9 @@ export default function NavigationalBar() {
         <div className="hidden md:block md:w-auto">
           <ul className="font-medium flex flex-row space-x-8">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.to}
                 aria-current={item.current ? "page" : undefined}
                 className={`block py-2 px-3 rounded-sm md:bg-transparent md:p-0 ${
                   item.current
@@ -62,7 +64,7 @@ export default function NavigationalBar() {
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </ul>
         </div>
@@ -82,28 +84,28 @@ export default function NavigationalBar() {
           >
             ×
           </button>
-          
         </div>
-        <hr className="text-white"/>
+        <hr className="text-white" />
         <ul className="flex flex-col p-4 space-y-4">
           {navigation.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.to}
               aria-current={item.current ? "page" : undefined}
               className={`block py-2 px-3 rounded-sm ${
                 item.current
                   ? "text-white font-semibold"
                   : "text-white hover:underline"
               }`}
-              onClick={() => setIsOpen(false)}
+              onClick={() => setIsOpen(false)} // close menu on click
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </ul>
       </div>
-      
+
+      {/* Backdrop */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
