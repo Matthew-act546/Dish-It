@@ -9,15 +9,15 @@ export default function Footer() {
   ];
 
   const webData = [
-    { name: "Github(source code)", href: "/" },
+    { name: "Github(source code)", href: "https://github.com/Matthew-act546/Dish-It" },
     { name: "Figma Design", href: "#" },
-    { name: "Meal it API", href: "/CountryDish" },
+    { name: "Meal it API", href: "https://www.themealdb.com/api.php" },
   ];
 
   const portfolio = [
-    { name: "Github", href: "/" },
-    { name: "Facebook", href: "/Favorites" },
-    { name: "Upwork", href: "/CountryDish" },
+    { name: "Github", href: "https://github.com/Matthew-act546" },
+    { name: "Facebook", href: "https://www.facebook.com/LearnToCodeWithMatthew/" },
+    { name: "Hashnode", href: "https://hashnode.com/@chewwwy" },
   ];
 
   return (
@@ -33,13 +33,14 @@ export default function Footer() {
               <ul className="list-none">
                 <li>
                   {navigation.map((item) => (
-                  <Link
+                  <a
                     key={item.name}
                     to={item.to}
                     className={`hover:underline`}
+                    target="_blank"
                   >
                     {item.name} <br />
-                  </Link>
+                  </a>
                   ))}
                 </li>
               </ul>
@@ -48,13 +49,14 @@ export default function Footer() {
               <ul className="list-none">
                 <li>
                   {webData.map((item) => (
-                  <Link
+                  <a
                     key={item.name}
                     href={item.href}
                     className={`hover:underline`}
+                    target="_blank"
                   >
                     {item.name} <br />
-                  </Link>
+                  </a>
                   ))}
                 </li>
               </ul>
@@ -63,13 +65,14 @@ export default function Footer() {
               <ul className="list-none">
                 <li>
                   {portfolio.map((item) => (
-                  <Link
+                  <a
                     key={item.name}
                     href={item.href}
                     className={`hover:underline`}
+                    target="_blank"
                   >
                     {item.name} <br />
-                  </Link>
+                  </a>
                   ))}
                 </li>
               </ul>
