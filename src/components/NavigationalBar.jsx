@@ -1,85 +1,115 @@
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
-const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Favorites', href: '#', current: false },
-  { name: 'Country Dish', href: '#', current: false },
-  { name: 'Browse Dish', href: '#', current: false },
-]
-
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(' ')
-// }
-
+import React, { useState } from "react";
 
 export default function NavigationalBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navigation = [
+    { name: "Home", href: "#fd", current: false },
+    { name: "Favorites", href: "#", current: false },
+    { name: "Country Dish", href: "#", current: false },
+    { name: "Browse Dish", href: "#", current: false },
+  ];
+
   return (
-    <Disclosure as="nav" className="bg-primary">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-17 items-center justify-between">
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl text-white font-semibold">Dish it.</h1>
-          </div>
+    <nav className="bg-[#8C5050]">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        {/* Logo */}
+        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./logo.png" className="h-12" alt="Dish Logo" />
+          <span className="self-center text-2xl font-semibold text-white whitespace-nowrap">
+            Dish it.
+          </span>
+        </a>
 
-          <div className="hidden md:flex flex-1 justify-end">
-            <input
-              type="text"
-              name="full_name"
-              className="w-50 h-9 max-w-sm px-3 rounded-full py-2 text-sm border-1 me-4 bg-white border-white text-gray-900 placeholder-gray-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-white"
-              placeholder="Search dishes..."
+        {/* Toggle Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          type="button"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-[#A65C5C] focus:outline-none focus:ring-2 focus:ring-amber-900"
+          aria-controls="navbar-default"
+          aria-expanded={isOpen}
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M1 1h15M1 7h15M1 13h15"
             />
-          </div>
+          </svg>
+        </button>
 
-          <div className="flex flex-1 justify-end mr-3 md:hidden">
-            <button className='bg-white rounded-full w-9 h-9 flex items-center justify-center'>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 text-amber-900">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Right: Navigation links */}
-          <div className="hidden sm:flex sm:items-center sm:space-x-4">
+        {/* Desktop Navigation */}
+        <div className="hidden md:block md:w-auto">
+          <ul className="font-medium flex flex-row space-x-8">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                aria-current={item.current ? 'page' : undefined}
-                className="text-white text-sm font-medium hover:underline"
+                aria-current={item.current ? "page" : undefined}
+                className={`block py-2 px-3 rounded-sm md:bg-transparent md:p-0 ${
+                  item.current
+                    ? "text-white font-semibold"
+                    : "text-white hover:underline"
+                }`}
               >
                 {item.name}
               </a>
             ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="sm:hidden">
-            <DisclosureButton className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-amber-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-              <XMarkIcon className="hidden h-6 w-6" aria-hidden="true" />
-            </DisclosureButton>
-          </div>
+          </ul>
         </div>
       </div>
 
-      {/* Mobile nav links */}
-      <DisclosurePanel className="sm:hidden">
-        <div className="space-y-1 px-2 pt-2 pb-3">
+      {/* Off-Canvas Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-[#8C5050] shadow-lg transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out md:hidden z-50`}
+      >
+        <div className="p-4 flex justify-between items-center">
+          <span className="text-white text-xl font-bold">Menu</span>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-white text-2xl font-bold"
+          >
+            ×
+          </button>
+          
+        </div>
+        <hr className="text-white"/>
+        <ul className="flex flex-col p-4 space-y-4">
           {navigation.map((item) => (
-            <DisclosureButton
+            <a
               key={item.name}
-              as="a"
               href={item.href}
-              aria-current={item.current ? 'page' : undefined}
-              className="text-white block rounded-md px-3 py-2 text-base font-medium"
+              aria-current={item.current ? "page" : undefined}
+              className={`block py-2 px-3 rounded-sm ${
+                item.current
+                  ? "text-white font-semibold"
+                  : "text-white hover:underline"
+              }`}
+              onClick={() => setIsOpen(false)}
             >
               {item.name}
-            </DisclosureButton>
+            </a>
           ))}
-        </div>
-      </DisclosurePanel>
-    </Disclosure>
+        </ul>
+      </div>
+      
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
+    </nav>
   );
 }
