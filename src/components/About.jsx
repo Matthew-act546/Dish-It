@@ -9,7 +9,7 @@ export default function About() {
   return (
     <>
       <hr className="border-8 border-primary" />
-      <section className="h-full w-screen flex justify-center bg-[#F5E1DA]/50">
+      <section className="h-full flex justify-center bg-[#F5E1DA]/50">
         <div className="container mt-7 ">
           <div className="text-center">
             <h1 className="text-primary text-5xl font-bold text-center">Our Features</h1>

@@ -4,7 +4,7 @@ export default function Popular() {
   return (
     <>
       <hr className="border-5 border-primary" />
-      <section className="w-screen flex justify-center bg-[#F5E1DA]/70">
+      <section className="flex justify-center bg-[#F5E1DA]/70">
         <div className="container my-7 ">
           <h1 className="text-primary text-5xl font-bold text-center">Popular Dish</h1>
           <div className="grid grid-cols-1 mx-auto my-4 gap-20 lg:grid-cols-3">

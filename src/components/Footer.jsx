@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <section className="w-screen flex justify-center bg-primary text-white">
+      <section className="flex justify-center bg-primary text-white">
         <div className="container mt-7">
           <div className="grid grid-cols-2 gap-10 mx-3 lg:grid-cols-4 md:grid-cols-4">
             <div>
