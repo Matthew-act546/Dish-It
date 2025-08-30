@@ -2,7 +2,6 @@ import recipeImage from '/recipe.png';
 import measurementImage from '/measurement.png';
 import videoImage from '/ytvid.png';
 import favImage from '/favorite.png';
-import simpleImage from '/simple.png';
 import recipe2Image from '/recipe2.png';
 
 export default function About() {
@@ -16,55 +15,47 @@ export default function About() {
             <p className="text-sm text-primary">Our primary features</p>
           </div>
           
-          <div className="grid grid-cols-1 gap-15 mx-10 md:grid-cols-2 lg:grid-cols-3">
-            <div className="h-80 rounded-2xl flex flex-col items-center justify-center text-wrap">
+          <div className="grid grid-cols-1 gap-2 mx-10 md:grid-cols-3 lg:grid-cols-3">
+            <div className="my-9 lg:my-15 rounded-2xl flex flex-col items-center justify-center text-wrap">
               <img src={recipeImage} alt="" className='h-25'/>
               <h2 className="text-primary text-2xl font-bold text-center">Recipe Instructions</h2>
               <p className="text-primary text-center">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat et quasi ea. Eum libero blanditiis enim! Nam aspernatur laborum iusto sequi rerum vitae, maiores voluptatum commodi! Eaque distinctio dolore aliquam.
+                In dish it we have a set of instructions for you to follow.
               </p>
             </div>
-            <div className="h-80 rounded-2xl flex flex-col items-center justify-center text-wrap">
+            <div className="my-9 lg:my-15 rounded-2xl flex flex-col items-center justify-center text-wrap">
               <img src={measurementImage} alt="" className='h-25'/>
               <h2 className="text-primary text-2xl font-bold text-center">Recipe Measurement</h2>
               <p className="text-primary text-center">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat et quasi ea. Eum libero blanditiis enim! Nam aspernatur laborum iusto sequi rerum vitae, maiores voluptatum commodi! Eaque distinctio dolore aliquam.
+                Not just that we indicate the measurement too!
               </p>
             </div>
-            <div className="h-80 rounded-2xl flex flex-col items-center justify-center text-wrap">
+            <div className="my-9 lg:my-15 rounded-2xl flex flex-col items-center justify-center text-wrap">
               <img src={videoImage} alt="" className='h-25'/>
               <h2 className="text-primary text-2xl font-bold text-center">Video Instructions</h2>
               <p className="text-primary text-center">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat et quasi ea. Eum libero blanditiis enim! Nam aspernatur laborum iusto sequi rerum vitae, maiores voluptatum commodi! Eaque distinctio dolore aliquam.
+                We do have a youtube videos here!
               </p>
             </div>
-            <div className="h-80 rounded-2xl flex flex-col items-center justify-center text-wrap">
+          </div>
+          <div className="grid grid-cols-1  mx-10 md:grid-cols-2 lg:grid-cols-2">
+            <div className="my-9 lg:my-15 rounded-2xl flex flex-col items-center justify-center text-wrap">
               <img src={favImage} alt="" className='h-25'/>
               <h2 className="text-primary text-2xl font-bold text-center">Add Favorites</h2>
               <p className="text-primary text-center">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat et quasi ea. Eum libero blanditiis enim! Nam aspernatur laborum iusto sequi rerum vitae, maiores voluptatum commodi! Eaque distinctio dolore aliquam.
-              </p></div>
-            <div className="h-80 rounded-2xl flex flex-col items-center justify-center text-wrap">
-              <img src={recipe2Image} alt="" className='h-25'/>
-              <h2 className="text-primary text-2xl font-bold text-center">Simple</h2>
-              <p className="text-primary text-center">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat et quasi ea. Eum libero blanditiis enim! Nam aspernatur laborum iusto sequi rerum vitae, maiores voluptatum commodi! Eaque distinctio dolore aliquam.
+                You can add favorites to save your the dish you like!
               </p>
             </div>
-            <div className="h-80 rounded-2xl flex flex-col items-center justify-center text-wrap">
-              <img src={simpleImage} alt="" className='h-25'/>
-              <h2 className="text-primary text-2xl font-bold text-center">Easy to understand</h2>
+            <div className="my-9 lg:my-15 rounded-2xl flex flex-col items-center justify-center text-wrap">
+              <img src={recipe2Image} alt="" className='h-25'/>
+              <h2 className="text-primary text-2xl font-bold text-center">Simple & Easy to understand</h2>
               <p className="text-primary text-center">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat et quasi ea. Eum libero blanditiis enim! Nam aspernatur laborum iusto sequi rerum vitae, maiores voluptatum commodi! Eaque distinctio dolore aliquam.
+                Dish it. Designed to become easy and simple to understand ensuring everyone can make dish! (even your 5yr old child can do dish it!)
               </p>
             </div>
           </div>
         </div>
-
-
       </section>
-
-
     </>
   )
 }
