@@ -1,4 +1,5 @@
 import NavigationalBar from "./NavigationalBar";
+import { Link } from "react-router";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
               href=""
               className="bg-primary text-white uppercase font-semibold px-6 py-3 rounded-md transition-all inline-block hover:scale-95"
             >
-              Browse Dish
+              <Link to="/BrowseDish">Browse Dish</Link>
             </a>
           </div>
         </div>

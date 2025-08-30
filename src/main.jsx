@@ -20,16 +20,16 @@ const router = createBrowserRouter([
   },
   {
     path: '/CountryDish',
-    element: <Favorites />,
+    element: <CountryDish />,
   },
   {
     path: '/BrowseDish',
-    element: <Favorites />,
+    element: <BrowseDish />,
   },
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
