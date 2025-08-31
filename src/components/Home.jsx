@@ -1,35 +1,80 @@
 import NavigationalBar from "./NavigationalBar";
-import { Link } from "react-router";
 
 export default function Home() {
   return (
     <>
-    <NavigationalBar />
-    <section className="bg-[url('/hero-img.png')] bg-no-repeat bg-cover bg-bottom w-full h-screen">
-      <div className="w-full h-full  flex items-center justify-center bg-black/35">
-        <div className="w-[40rem] h-auto p-10 rounded-4xl flex items-center justify-center bg-black/20">
-          <div className="container">
-            <h1 className="text-white uppercase text-4xl font-bold">
-              Your personal <br />
-              recipe companion
+    
+      <NavigationalBar />
+      <section className="w-full h-screen">
+        <div className="banner bg-primary w-full">
+          <div className="flex h-35 justify-center items-center py-10">
+            <form className="flex max-w-lg w-full relative">
+              {/* Search Input */}
+              <label htmlFor="voice-search" className="sr-only">
+                Search
+              </label>
+              <div className="relative w-full">
+                <input
+                  type="text"
+                  id="voice-search"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3"
+                  placeholder="Search Dish"
+                  required
+                />
+              </div>
 
-            </h1>
-            <p className="text-white w-full max-w-2xl my-8 text-lg">
-              Whether you’re craving something new or want to recreate a classic, 
-              Dish It makes it easy to find, learn, and enjoy meals from all cuisines — all in one place.
-
-            </p>
-            <Link
-              to="/BrowseDish"
-              className="bg-primary text-white uppercase font-semibold px-6 py-3 rounded-md transition-all inline-block hover:scale-95"
-            >
-              Browse Dish
-            </Link>
-
+              {/* Search Button */}
+              <button
+                type="submit"
+                className="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-primary bg-secondary rounded-lg border border-secondary hover:bg-secondary/90 focus:ring-4 focus:outline-none focus:ring-amber-800"
+              >
+                <svg
+                  className="w-4 h-4 mr-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+                Search
+              </button>
+            </form>
           </div>
         </div>
-      </div>
-    </section>
+
+        <div className="container my-30 flex justify-center">
+          <div className="grid grid-cols-2 gap-6 place-items-center mx-auto">
+            <div>
+              <div className="h-[20rem] w-[35rem] text-xl rounded-3xl bg-primary p-10 text-secondary">
+                <p>
+                  Whether you’re craving something new or want to recreate a classic, Meal It makes it easy to find, learn, and enjoy meals from all cuisines — all in one place.
+                </p>
+                <br />
+                <button
+                  type="button"
+                  className="flex justify-center items-center py-2.5 px-3 text-sm w-30 h-12 font-medium text-primary bg-secondary rounded-lg hover:bg-secondary/90 focus:ring-4 focus:outline-none focus:ring-amber-800">
+                  Browse dish
+                </button>
+              </div>
+            </div>
+            <div className="h-[30rem] w-[55rem] rounded-3xl bg-secondary p-4 text-secondary flex items-center justify-center">
+              tery
+            </div>
+          </div>
+        </div>
+
+
+        
+
+        
+      </section>
     </>
-  )
+  );
 }
