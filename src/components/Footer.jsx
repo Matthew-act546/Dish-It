@@ -33,14 +33,14 @@ export default function Footer() {
               <ul className="list-none">
                 <li>
                   {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     to={item.to}
                     className={`hover:underline`}
                     target="_blank"
                   >
                     {item.name} <br />
-                  </a>
+                  </Link>
                   ))}
                 </li>
               </ul>
