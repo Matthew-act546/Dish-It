@@ -3,11 +3,11 @@ import NavigationalBar from "./NavigationalBar";
 export default function Home() {
   return (
     <>
-    
+      
       <NavigationalBar />
-      <section className="w-full h-screen">
+      <section className="w-full h-screen  bg-secondary/20">
         <div className="banner bg-primary w-full">
-          <div className="flex h-35 justify-center items-center py-10">
+          <div className="flex h-35 justify-center items-center py-10 mx-7">
             <form className="flex max-w-lg w-full relative">
               {/* Search Input */}
               <label htmlFor="voice-search" className="sr-only">
@@ -26,7 +26,7 @@ export default function Home() {
               {/* Search Button */}
               <button
                 type="submit"
-                className="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-primary bg-secondary rounded-lg border border-secondary hover:bg-secondary/90 focus:ring-4 focus:outline-none focus:ring-amber-800"
+                className="btn-accent ml-2"
               >
                 <svg
                   className="w-4 h-4 mr-2"
@@ -49,31 +49,34 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container my-30 flex justify-center">
-          <div className="grid grid-cols-2 gap-6 place-items-center mx-auto">
-            <div>
-              <div className="h-[20rem] w-[35rem] text-xl rounded-3xl bg-primary p-10 text-secondary">
-                <p>
-                  Whether you’re craving something new or want to recreate a classic, Meal It makes it easy to find, learn, and enjoy meals from all cuisines — all in one place.
-                </p>
-                <br />
-                <button
-                  type="button"
-                  className="flex justify-center items-center py-2.5 px-3 text-sm w-30 h-12 font-medium text-primary bg-secondary rounded-lg hover:bg-secondary/90 focus:ring-4 focus:outline-none focus:ring-amber-800">
-                  Browse dish
-                </button>
-              </div>
-            </div>
-            <div className="h-[30rem] w-[55rem] rounded-3xl bg-secondary p-4 text-secondary flex items-center justify-center">
-              tery
-            </div>
-          </div>
+      <div className="container my-5 lg:my-10 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mx-auto px-4">
+  
+        
+        <div className=" flex-1 min-w-[18rem]
+      text-xl rounded-3xl bg-primary/90 p-6 md:p-10 shadow-md shadow-primary text-white">
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
+            Your personal recipe companion
+          </h1>
+          <p className="leading-relaxed text-gray-50">
+            Whether you’re craving something new or want to recreate a classic, Meal It makes it easy to find, learn, and enjoy meals from all cuisines — all in one place.
+          </p>
+          <br />
+          <button
+            type="button"
+            className="btn-accent h-[3rem]">
+            Browse dish
+          </button>
         </div>
 
+        <div className="md:h-[32rem] w-full md:flex-1">
+          <img src="dish1-h.jpeg" alt="Delicious food"
+            className="rounded-3xl shadow-xl shadow-primary h-full w-full " />
+        </div>
 
-        
+      </div>
 
-        
+
+
       </section>
     </>
   );

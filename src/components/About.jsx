@@ -7,7 +7,7 @@ import recipe2Image from '/recipe2.png';
 export default function About() {
   return (
     <>
-      <hr className="border-8 border-primary" />
+      <hr className="border-5 border-primary" />
       <section className="h-full flex justify-center bg-[#F5E1DA]/50">
         <div className="container mt-7 ">
           <div className="text-center">
