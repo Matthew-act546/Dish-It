@@ -1,7 +1,9 @@
+import NavigationalBar from "./NavigationalBar";
+
 export default function BrowseDish() {
   return (
     <>
-    <p>Browse Dish</p>
+     <NavigationalBar />
     </>
   )
 }

@@ -1,4 +1,5 @@
 import NavigationalBar from "./NavigationalBar";
+import { Link } from "react-router";
 
 export default function Home() {
   return (
@@ -61,11 +62,12 @@ export default function Home() {
             Whether you’re craving something new or want to recreate a classic, Meal It makes it easy to find, learn, and enjoy meals from all cuisines — all in one place.
           </p>
           <br />
-          <button
+          <Link 
             type="button"
-            className="btn-accent py-3 px-4  h-[3rem]">
+            className="btn-accent py-3 px-4  h-[3rem]"
+            to={"/BrowseDish"}>
             Browse dish
-          </button>
+          </Link>
         </div>
 
         <div className="md:h-[32rem] flex items-center w-full  md:flex-1">

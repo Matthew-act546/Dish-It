@@ -1,7 +1,9 @@
+import NavigationalBar from "./NavigationalBar";
+
 export default function CountryDish() {
   return (
     <>
-    <p>Country Dish</p>
+      <NavigationalBar />
     </>
   )
 }
