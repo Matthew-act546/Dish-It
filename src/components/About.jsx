@@ -15,42 +15,42 @@ export default function About() {
             <p className="text-sm text-primary">Our primary features</p>
           </div>
           
-          <div className="grid grid-cols-1 gap-2 mx-10 md:grid-cols-3 lg:grid-cols-3">
-            <div className="my-9 lg:my-15 rounded-2xl flex flex-col items-center justify-center text-wrap">
+          <div className="grid sm:gap-0 grid-cols-1 gap-5 mx-10 md:grid-cols-3 lg:grid-cols-3">
+            <div className="my-10 rounded-2xl flex flex-col items-center justify-center text-wrap">
               <img src={recipeImage} alt="" className='h-25'/>
-              <h2 className="text-primary text-2xl font-bold text-center">Recipe Instructions</h2>
-              <p className="text-primary text-center">
-                In dish it we have a set of instructions for you to follow.
+              <h2 className="text-primary text-3xl font-bold leading-12 text-center rt-2">Recipe Instructions</h2>
+              <p className="text-primary text-center leading-6.5 rp-2 lg:px-15">
+                Dish It provides clear, step-by-step instructions to guide you through every recipe. Whether you’re a beginner or a pro, our detailed directions make cooking stress-free and enjoyable.
               </p>
             </div>
-            <div className="my-9 lg:my-15 rounded-2xl flex flex-col items-center justify-center text-wrap">
+            <div className="my-10 rounded-2xl flex flex-col items-center justify-center text-wrap">
               <img src={measurementImage} alt="" className='h-25'/>
-              <h2 className="text-primary text-2xl font-bold text-center">Recipe Measurement</h2>
-              <p className="text-primary text-center">
-                Not just that we indicate the measurement too!
+              <h2 className="text-primary font-bold leading-10 rt-2 text-center">Recipe Measurement</h2>
+              <p className="text-primary text-center leading-6.5 rp-2 lg:px-15">
+                No more guessing! We include accurate ingredient measurements so your dishes come out perfect every time. Just follow the quantities, and you’re good to go.
               </p>
             </div>
-            <div className="my-9 lg:my-15 rounded-2xl flex flex-col items-center justify-center text-wrap">
+            <div className="my-10 rounded-2xl flex flex-col items-center justify-center text-wrap">
               <img src={videoImage} alt="" className='h-25'/>
-              <h2 className="text-primary text-2xl font-bold text-center">Video Instructions</h2>
-              <p className="text-primary text-center">
-                We do have a youtube videos here!
+              <h2 className="text-primary font-bold leading-10 rt-2 text-center">Video Instructions</h2>
+              <p className="text-primary text-center leading-6.5 rp-2 lg:px-15">
+                Prefer visual learning? Dish It offers YouTube video tutorials for each recipe, making it easier for you to follow along and cook with confidence.
               </p>
             </div>
           </div>
           <div className="grid grid-cols-1  mx-10 md:grid-cols-2 lg:grid-cols-2">
-            <div className="my-9 lg:my-15 rounded-2xl flex flex-col items-center justify-center text-wrap">
+            <div className="my-10 rounded-2xl flex flex-col items-center justify-center text-wrap">
               <img src={favImage} alt="" className='h-25'/>
-              <h2 className="text-primary text-2xl font-bold text-center">Add Favorites</h2>
-              <p className="text-primary text-center">
-                You can add favorites to save your the dish you like!
+              <h2 className="text-primary font-bold leading-10 rt-2 text-center">Add Favorites</h2>
+              <p className="text-primary text-center leading-6.5 rp-2 lg:px-15">
+                Found a recipe you love? Save it in your favorites for quick access anytime. Your go-to dishes will always be just one tap away.
               </p>
             </div>
-            <div className="my-9 lg:my-15 rounded-2xl flex flex-col items-center justify-center text-wrap">
+            <div className="my-10 rounded-2xl flex flex-col items-center justify-center text-wrap">
               <img src={recipe2Image} alt="" className='h-25'/>
-              <h2 className="text-primary text-2xl font-bold text-center">Simple & Easy to understand</h2>
-              <p className="text-primary text-center">
-                Dish it. Designed to become easy and simple to understand ensuring everyone can make dish! (even your 5yr old child can do dish it!)
+              <h2 className="text-primary font-bold leading-10 rt-2 text-center">Simple & Easy to understand</h2>
+              <p className="text-primary text-center leading-6.5 rp-2 lg:px-15">
+                Cooking shouldn’t be complicated. Dish It is designed to be simple and beginner-friendly, so anyone can create delicious meals with ease.
               </p>
             </div>
           </div>

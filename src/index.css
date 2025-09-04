@@ -5,10 +5,19 @@
   @apply inline-flex shadow-2xl items-center text-sm font-medium text-white bg-accent rounded-lg border border-accent hover:bg-accent-dark focus:ring-4 focus:outline-none focus:ring-accent
 }
 
+/* Typography */
 .rt-1 {
   font-size: clamp(2rem, calc(4vw + 1rem), 3rem);
 }
 
 .rp-1 {
   font-size: clamp(1rem, calc(2vw + 0.3rem), 1.2rem);
+}
+
+.rt-2 {
+  font-size: clamp(1.5rem, calc(2vw + 0.8rem), 2.3rem);
+}
+
+.rp-2 {
+  font-size: clamp(0.8em, calc(2vw + 0.3rem), 1rem);
 }
