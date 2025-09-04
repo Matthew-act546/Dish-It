@@ -4,3 +4,11 @@
 .btn-accent {
   @apply inline-flex shadow-2xl items-center py-3 px-4 text-sm font-medium text-white bg-accent rounded-lg border border-accent hover:bg-accent-dark focus:ring-4 focus:outline-none focus:ring-accent
 }
+
+.rt-1 {
+  font-size: clamp(2rem, calc(4vw + 1rem), 3rem);
+}
+
+.rp-1 {
+  font-size: clamp(1rem, calc(2vw + 0.3rem), 1.2rem);
+}

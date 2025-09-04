@@ -5,7 +5,7 @@ export default function Home() {
     <>
       
       <NavigationalBar />
-      <section className="w-full h-screen  bg-secondary/20">
+      <section className="w-full h-screen md:[100dvh] bg-secondary/20">
         <div className="banner bg-primary w-full">
           <div className="flex h-35 justify-center items-center py-10 mx-7">
             <form className="flex max-w-lg w-full relative">
@@ -54,10 +54,10 @@ export default function Home() {
         
         <div className=" flex-1 min-w-[18rem]
       text-xl rounded-3xl bg-primary/90 p-6 md:p-10 shadow-md shadow-primary text-white">
-          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
+          <h1 className="text-3xl md:text-4xl rt-1 font-bold leading-tight mb-4">
             Your personal recipe companion
           </h1>
-          <p className="leading-relaxed text-gray-50">
+          <p className="leading-relaxed rp-1 text-gray-50">
             Whether you’re craving something new or want to recreate a classic, Meal It makes it easy to find, learn, and enjoy meals from all cuisines — all in one place.
           </p>
           <br />
@@ -68,9 +68,9 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="md:h-[32rem] w-full md:flex-1">
+        <div className="md:h-[32rem] flex items-center w-full md:flex-1">
           <img src="dish1-h.jpeg" alt="Delicious food"
-            className="rounded-3xl shadow-xl shadow-primary h-full w-full " />
+            className="rounded-3xl md:h-[24rem] shadow-xl shadow-primary h-full w-full " />
         </div>
 
       </div>
