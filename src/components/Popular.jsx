@@ -39,9 +39,9 @@ export default function Popular() {
             {dishes.map((dish) => (
               <div
                 key={dish.id}
-                className="max-w-sm w-full bg-white border border-gray-200 rounded-4xl shadow-sm"
+                className="max-w-sm w-full bg-white/80 backdrop-blur-sm border-primary/30 border-3 rounded-4xl shadow-xl"
               >
-                <div className="border-2 m-5 rounded-3xl overflow-hidden">
+                <div className="border-2 border-primary/50 shadow m-5 p-2 rounded-3xl overflow-hidden">
                   <a href="#">
                     <img className="rounded-t-lg w-full" src={dish.image} alt={dish.name} />
                   </a>
@@ -59,7 +59,7 @@ export default function Popular() {
                     {dish.tags.map((tag, index) => (
                       <li
                         key={index}
-                        className="border border-gray-300 px-3 py-1 rounded-4xl hover:bg-amber-900 hover:text-white text-center whitespace-nowrap"
+                        className="border border-gray-300 px-3 py-1 rounded-4xl hover:bg-accent hover:text-white text-center whitespace-nowrap"
                       >
                         {tag}
                       </li>
@@ -68,7 +68,7 @@ export default function Popular() {
 
                   <a
                     href="#"
-                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-amber-900"
+                    className="btn-accent p-2 "
                   >
                     Dish it now!
                     <svg

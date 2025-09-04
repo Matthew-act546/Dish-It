@@ -26,7 +26,7 @@ export default function Home() {
               {/* Search Button */}
               <button
                 type="submit"
-                className="btn-accent ml-2"
+                className="btn-accent py-3 px-4  ml-2"
               >
                 <svg
                   className="w-4 h-4 mr-2"
@@ -63,7 +63,7 @@ export default function Home() {
           <br />
           <button
             type="button"
-            className="btn-accent h-[3rem]">
+            className="btn-accent py-3 px-4  h-[3rem]">
             Browse dish
           </button>
         </div>

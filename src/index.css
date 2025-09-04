@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 .btn-accent {
-  @apply inline-flex shadow-2xl items-center py-3 px-4 text-sm font-medium text-white bg-accent rounded-lg border border-accent hover:bg-accent-dark focus:ring-4 focus:outline-none focus:ring-accent
+  @apply inline-flex shadow-2xl items-center text-sm font-medium text-white bg-accent rounded-lg border border-accent hover:bg-accent-dark focus:ring-4 focus:outline-none focus:ring-accent
 }
 
 .rt-1 {
