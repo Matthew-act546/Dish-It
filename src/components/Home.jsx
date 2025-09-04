@@ -5,9 +5,9 @@ export default function Home() {
     <>
       
       <NavigationalBar />
-      <section className="w-full h-screen md:[100dvh] bg-secondary/20">
+      <section className="w-full h-screen md:[100dvh] bg-secondary/20 mb-5">
         <div className="banner bg-primary w-full">
-          <div className="flex h-35 justify-center items-center py-10 mx-7">
+          <div className="flex justify-center items-center py-10 mx-7">
             <form className="flex max-w-lg w-full relative">
               {/* Search Input */}
               <label htmlFor="voice-search" className="sr-only">
@@ -68,9 +68,9 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="md:h-[32rem] flex items-center w-full md:flex-1">
+        <div className="md:h-[32rem] flex items-center w-full  md:flex-1">
           <img src="dish1-h.jpeg" alt="Delicious food"
-            className="rounded-3xl md:h-[24rem] shadow-xl shadow-primary h-full w-full " />
+            className="rounded-3xl md:h-[20rem] lg:h-[30rem] shadow-xl shadow-primary w-full " />
         </div>
 
       </div>
