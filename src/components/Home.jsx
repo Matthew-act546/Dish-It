@@ -5,9 +5,9 @@ export default function Home() {
     <>
       
       <NavigationalBar />
-      <section className="w-full h-screen md:[100dvh] bg-secondary/20 mb-5">
+      <section className="w-full h-screen md:[100dvh] bg-secondary/20 pb-10">
         <div className="banner bg-primary w-full">
-          <div className="flex justify-center items-center py-10 mx-7">
+          <div className="flex justify-center items-center py-7 lg:py-10 mx-7">
             <form className="flex max-w-lg w-full relative">
               {/* Search Input */}
               <label htmlFor="voice-search" className="sr-only">
