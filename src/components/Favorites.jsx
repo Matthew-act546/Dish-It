@@ -39,10 +39,12 @@ const dishes = [
 
 export default function Favorites() {
   return (
-    <>
+    <div className="bg-[#F5E1DA]/70 min-h-screen">
+
       <NavigationalBar />
-      <section className="w-full">
-        <div className="mt-15 flex justify-center">
+      
+      <section className="w-full ">
+        <div className="mt-15 flex justify-center ">
           <div>
             <div className="flex justify-center ">
               <FontAwesomeIcon icon={faHeart} className="text-primary text-[5rem] w-full" /> 
@@ -52,16 +54,14 @@ export default function Favorites() {
             <p className="text-center">list of your favorites</p>
           </div>
         </div>
-         <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5 my-4 mx-5 lg:mx-15 justify-items-center">
+         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 my-4 mx-5 lg:mx-15 justify-items-center cursor-pointer">
             {dishes.map((dish) => (
               <div
                 key={dish.id}
-                className="max-w-sm w-full bg-white/80 backdrop-blur-sm border-primary/30 border-3 rounded-4xl shadow-xl"
+                className="card border-1 border-primary hover:border-2 hover:border-primary "
               >
                 <div className="border-2 border-primary/50 shadow m-5 p-2 rounded-3xl overflow-hidden">
-                  <a href="#">
                     <img className="rounded-t-lg w-full" src={dish.image} alt={dish.name} />
-                  </a>
                 </div>
 
                 <div className="p-5">
@@ -72,43 +72,23 @@ export default function Favorites() {
                   </a>
                   <p className="mb-3 font-normal">{dish.category}</p>
 
-                  <ul className="list-none grid grid-flow-col mb-5 overflow-x-auto gap-2">
+                  <ul className="list-none flex flex-wrap gap-1 ">
                     {dish.tags.map((tag, index) => (
                       <li
                         key={index}
-                        className="border border-gray-300 px-3 py-1 rounded-4xl hover:bg-accent hover:text-white text-center whitespace-nowrap"
+                        className="tags"
                       >
                         {tag}
                       </li>
                     ))}
                   </ul>
 
-                  <a
-                    href="#"
-                    className="btn-accent p-2 "
-                  >
-                    Dish it now!
-                    <svg
-                      className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 14 10"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M1 5h12m0 0L9 1m4 4L9 9"
-                      />
-                    </svg>
-                  </a>
+                
                 </div>
               </div>
             ))}
           </div>
       </section>
-    </>
+    </div>
   )
 }

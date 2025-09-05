@@ -5,6 +5,15 @@
   @apply inline-flex shadow-2xl items-center text-sm font-medium text-white bg-accent rounded-lg border border-accent hover:bg-accent-dark focus:ring-4 focus:outline-none focus:ring-accent
 }
 
+.card{
+  @apply max-w-sm w-full bg-white/80 backdrop-blur-sm rounded-3xl hover:shadow-sm hover:shadow-primary transform transition duration-300 hover:scale-100 hover:-translate-y-1
+}
+
+.tags {
+  /* @apply border border-gray-300 px-2 rounded-4xl hover:bg-accent hover:text-white text-center break-words */
+  @apply border border-gray-300 px-3 py-1 rounded-4xl hover:bg-accent hover:text-white text-center break-words
+}
+
 /* Typography */
 .rt-1 {
   font-size: clamp(2rem, calc(4vw + 1rem), 3rem);
