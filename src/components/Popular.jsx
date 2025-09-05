@@ -43,23 +43,20 @@ export default function Popular() {
         <div className="container my-7">
           <h1 className="text-primary text-5xl font-bold text-center">Popular Dish</h1>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 my-5 justify-items-center">
+          <div className="grid grid-cols-2 sm:mx-29 lg:grid-cols-4 gap-5 my-5 justify-items-center">
             {dishes.map((dish) => (
               <div
                 key={dish.id}
-                className="card border-2 border-transparent hover:border-primary "
+                className="card border-2 border-transparent hover:border-primary cursor-pointer">
 
-              >
-                <div className="border-2 border-primary/50 shadow m-5 p-2 rounded-3xl cursor-pointer">
+                <div className="border-2 border-primary/50 shadow m-5 p-2 rounded-3xl">
                   <img className="rounded-t-lg w-full" src={dish.image} alt={dish.name} />
                 </div>
 
                 <div className="px-6 py-5">
-                  <a href="#">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight">
-                      {dish.name} <sup>{dish.flag}</sup>
-                    </h5>
-                  </a>
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight">
+                    {dish.name} <sup>{dish.flag}</sup>
+                  </h5>
                   <p className="mb-3 font-normal">{dish.category}</p>
 
                   <ul className="list-none flex flex-wrap gap-1 ">
@@ -72,9 +69,6 @@ export default function Popular() {
                       </li>
                     ))}
                   </ul>
-
-
-                  
                 </div>
               </div>
             ))}
