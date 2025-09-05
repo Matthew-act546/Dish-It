@@ -6,7 +6,7 @@
 }
 
 .card{
-  @apply max-w-sm w-full bg-white/80 backdrop-blur-sm rounded-3xl hover:shadow-sm hover:shadow-primary transform transition duration-300 hover:scale-100 hover:-translate-y-1
+  @apply max-w-sm w-full bg-white/80 backdrop-blur-sm rounded-xl hover:shadow-sm hover:shadow-primary transform transition duration-300 hover:scale-100 hover:-translate-y-1
 }
 
 .tags {
