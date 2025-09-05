@@ -43,7 +43,7 @@ export default function Popular() {
         <div className="container my-7">
           <h1 className="text-primary text-5xl font-bold text-center">Popular Dish</h1>
 
-          <div className="grid grid-cols-2 sm:mx-5 lg:grid-cols-4 gap-5 my-5 justify-items-center">
+          <div className="grid grid-cols-2 mx-5 lg:grid-cols-4 gap-2 lg:gap-5 my-5 justify-items-center">
             {dishes.map((dish) => (
               <div
                 key={dish.id}
