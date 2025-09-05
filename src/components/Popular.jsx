@@ -58,17 +58,6 @@ export default function Popular() {
                     {dish.name} <sup>{dish.flag}</sup>
                   </h5>
                   <p className="mb-3 font-normal">{dish.category}</p>
-
-                  <ul className="list-none flex flex-wrap gap-1 ">
-                    {dish.tags.map((tag, index) => (
-                      <li
-                        key={index}
-                        className="tags"
-                      >
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             ))}
