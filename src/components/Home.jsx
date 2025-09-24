@@ -11,7 +11,7 @@ export default function Home() {
         <div className="banner bg-primary w-full">
           <div className="flex justify-center items-center py-7 lg:py-10 mx-7">
             <form className="flex max-w-lg w-full relative">
-              {/* Search Input */}
+
               <label htmlFor="voice-search" className="sr-only">
                 Search
               </label>
@@ -21,11 +21,9 @@ export default function Home() {
                   id="voice-search"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3"
                   placeholder="Search Dish"
-                  required
                 />
               </div>
 
-              {/* Search Button */}
               <button
                 type="submit"
                 className="btn-accent py-3 px-4  ml-2"
