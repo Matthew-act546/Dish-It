@@ -43,7 +43,7 @@ export default function Favorites() {
 
       <NavigationalBar />
       <section className="w-full ">
-        <div className="mt-15 flex justify-center ">
+        <div className="mt-15 fsex justify-center ">
           <div>
             <div className="flex justify-center ">
               <FontAwesomeIcon icon={faHeart} className="text-primary text-[5rem] w-full" /> 
