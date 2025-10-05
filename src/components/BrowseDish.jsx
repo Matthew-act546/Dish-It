@@ -1,36 +1,34 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import{ faHeart } from '@fortawesome/free-solid-svg-icons'; 
-
 import NavigationalBar from "./NavigationalBar";
 
 export default function BrowseDish() {
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(true);
 
- useEffect(() => {
-  const fetchAllMeals = async () => {
-    try {
-    
-      const cachedMeals = localStorage.getItem("meals");
-      if (cachedMeals) {
-        setMeals(JSON.parse(cachedMeals));
-        setLoading(false);
-        return;
-      }
-
-      const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-      const allMeals = [];
-
-      for (const letter of alphabet) {
-        const res = await fetch(
-          `https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`
-        );
-        const data = await res.json();
-        if (data.meals) {
-          allMeals.push(...data.meals);
+  useEffect(() => {
+    const fetchAllMeals = async () => {
+      try {      
+        const cachedMeals = localStorage.getItem("meals");
+        if (cachedMeals) {
+          setMeals(JSON.parse(cachedMeals));
+          setLoading(false);
+          return;
         }
-      }
+
+        const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+        const allMeals = [];
+
+        for (const letter of alphabet) {
+          const res = await fetch(
+            `https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`
+          );
+          const data = await res.json();
+          if (data.meals) {
+            allMeals.push(...data.meals);
+          }
+        }
 
       setMeals(allMeals);
 
