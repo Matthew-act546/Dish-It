@@ -18,7 +18,7 @@ export default function BrowseDish() {
         }
 
         const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-        const allMeals = [];
+        const allMeals = []; 
 
         for (const letter of alphabet) {
           const res = await fetch(
@@ -102,3 +102,4 @@ export default function BrowseDish() {
     </div>
   );
 }
+

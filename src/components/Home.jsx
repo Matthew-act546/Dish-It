@@ -1,10 +1,10 @@
 import NavigationalBar from "./NavigationalBar";
 import { Link } from "react-router";
+import Button from "./ui/Button.jsx"
 
 export default function Home() {
   return (
     <>
-      
       <NavigationalBar />
       <section className="w-full min-h-screen bg-secondary/20 pb-10">
 
@@ -24,9 +24,9 @@ export default function Home() {
                 />
               </div>
 
-              <button
+              <Button
                 type="submit"
-                className="btn-accent py-3 px-4  ml-2"
+                className="ml-2"
               >
                 <svg
                   className="w-4 h-4 mr-2"
@@ -44,14 +44,12 @@ export default function Home() {
                   />
                 </svg>
                 Search
-              </button>
+              </Button>
             </form>
           </div>
         </div>
 
         <div className="container my-5 lg:my-10 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10 mx-auto px-4">
-    
-          
           <div className=" flex-1 min-w-[18rem]text-xl rounded-3xl bg-primary/90 p-6 md:p-10 shadow-md shadow-primary text-white">
             <h1 className="text-3xl md:text-4xl rt-1 font-bold leading-tight mb-4">
               Your personal recipe companion
@@ -60,12 +58,16 @@ export default function Home() {
               Whether you’re craving something new or want to recreate a classic, Meal It makes it easy to find, learn, and enjoy meals from all cuisines — all in one place.
             </p>
             <br />
-            <Link 
-              type="button"
-              className="btn-accent py-3 px-4  h-[3rem]"
-              to={"/BrowseDish"}>
+
+            <Button
+              as={Link}
+              to="/BrowseDish"
+              variant="accent"
+              size="md"
+              className="h-[3rem]"
+            >
               Browse dish
-            </Link>
+            </Button>
           </div>
 
           <div className="w-full md:flex-1">
