@@ -5,8 +5,6 @@ import Popular from './components/Popular'
 import './index.css'
 
 function App() {
-
-
   return (
     <>
       <Home></Home>
