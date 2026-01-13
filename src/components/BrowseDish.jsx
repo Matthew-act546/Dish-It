@@ -9,7 +9,7 @@ export default function BrowseDish() {
 
   useEffect(() => {
     const fetchAllMeals = async () => {
-      try {      
+      try {
         const cachedMeals = localStorage.getItem("meals");
         if (cachedMeals) {
           setMeals(JSON.parse(cachedMeals));
@@ -41,7 +41,7 @@ export default function BrowseDish() {
   };
 
   fetchAllMeals();
-}, []); 
+}, []);
 
   if (loading) {
     return (

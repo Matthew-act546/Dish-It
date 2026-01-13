@@ -7,6 +7,7 @@ import PageNotFound from './components/PageNotFound.jsx';
 import Favorites from './components/Favorites.jsx';
 import BrowseDish from './components/BrowseDish.jsx';
 import CountryDish from './components/CountryDish.jsx';
+import ClickedDish from './components/ClickedDish.jsx';
 
 const router = createBrowserRouter([ 
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     path: '/BrowseDish',
     element: <BrowseDish />,
   },
+  {
+    path: '/Dish',
+    element: <ClickedDish />
+  }
 ])
 
 createRoot(document.getElementById('root')).render(
