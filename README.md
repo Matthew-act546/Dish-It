@@ -1,6 +1,3 @@
 # Dish It
 
-placeholder text
-
-
-
+placeholder text soon to be posted
